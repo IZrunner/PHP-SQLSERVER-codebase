@@ -1,23 +1,23 @@
 <?php
-    class Orders {
+    class Order {
         private $orderCode;
         private $orderCustomerId;
         private $orderWorkerId;
         private $orderServiceCode;
         private $orderDeviceCode;
-        private $contractConclusionDae;
+        private $contractConclusionDate;
         private $orderDeadline;
         private $orderExecuted;
 
-        function __construct(int $code, int $customerId, int $workerId,
-            int $orderServiceCode, int $orderDeviceCode, string $conclusionDate, string $deadline,
-            bool $executed) {
+        function __construct(int $code, Client $customerId, Worker $workerId,
+            int $orderServiceCode, int $orderDeviceCode, datetime $conclusionDate, 
+            datetime $deadline, bool $executed) {
             $this->orderCode = $code;
             $this->orderCustomerId = $customerId;
             $this->orderWorkerId = $workerId;
             $this->orderServiceCode = $orderServiceCode;
             $this->orderDeviceCode = $orderDeviceCode;
-            $this->contractConclusionDae = $conclusionDate;
+            $this->contractConclusionDate = $conclusionDate;
             $this->orderDeadline = $deadline;
             $this->orderExecuted = $executed;
         }
@@ -43,11 +43,11 @@
         }
 
         function getContractConclusionDae() {
-            return $this->contractConclusionDae;
+            return $this->contractConclusionDate->format("Y.m.d");
         }
 
         function getOrderDeadline() {
-            return $this->orderDeadline;
+            return $this->orderDeadline->format("Y.m.d");
         }
 
         function getOrderExecuted() {

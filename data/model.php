@@ -1,5 +1,5 @@
 <?php
-    class Models {
+    class Model {
         private $modelCode;
         private $modelName;
         private $modelBrandCode;
@@ -7,7 +7,7 @@
         
 
         function __construct(int $code, string $name,
-            int $modelBrandCode, int $screenSize) {
+            Brand $modelBrandCode, int $screenSize) {
             $this->modelCode = $code;
             $this->modelName = $name;
             $this->modelBrandCode = $modelBrandCode;

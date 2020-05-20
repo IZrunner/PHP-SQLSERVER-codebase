@@ -1,5 +1,5 @@
 <?php 
-    class Brands {
+    class Brand {
         private $brandCode;
         private $brandName;
 

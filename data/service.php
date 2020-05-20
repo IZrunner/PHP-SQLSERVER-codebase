@@ -1,5 +1,5 @@
 <?php
-    class Services {
+    class Service {
         private $serviceCode;
         private $serviceName;
         private $servicePrice;

@@ -1,5 +1,5 @@
 <?php
-    class Workers {
+    class Worker {
         private $workerId;
         private $workerName;
         private $workerLastName;

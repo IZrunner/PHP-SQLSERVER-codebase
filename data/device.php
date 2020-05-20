@@ -1,5 +1,5 @@
 <?php
-    class Devices {
+    class Device {
         private $deviceCode;
         private $deviceSerialNumber;
         private $deviceModelCode;
@@ -7,7 +7,7 @@
         private $deviceModificationStatus;
 
         function __construct(int $code, string $serialNumber,
-            int $modelCode, bool $available, string $status) {
+            Model $modelCode, bool $available, string $status) {
             $this->deviceCode = $code;
             $this->deviceSerialNumber = $serialNumber;
             $this->deviceModelCode = $modelCode;

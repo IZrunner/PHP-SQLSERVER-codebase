@@ -8,6 +8,7 @@
         private $contractConclusionDate;
         private $orderDeadline;
         private $orderExecuted;
+        private $queryResultSet = [];
 
         function __construct(int $code, Client $customerId, Worker $workerId,
             int $orderServiceCode, int $orderDeviceCode, datetime $conclusionDate, 
@@ -52,6 +53,13 @@
 
         function getOrderExecuted() {
             return $this->orderExecuted;
+        }
+
+        function readFromDB() {
+            // SELECT order_code, order_customer_id, order_worker_id, 
+	        // order_service_code,	order_device_code, contract_conclusion_date, 
+	        // order_deadline, order_executed
+            // FROM Orders
         }
     }
 ?>
